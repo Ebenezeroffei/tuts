@@ -12,7 +12,7 @@ const todo = [
     {
         id: 3,
         text: "Go to work",
-        completed: true,
+        completed: false,
     },
     {
         id: 4,

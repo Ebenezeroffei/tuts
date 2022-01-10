@@ -1,34 +1,21 @@
 import React from 'react'
+import TodoItem from './TodoItem';
 
-// class Todo extends React.Component{
-
-//     render() {
-//         let {id,text,completed,handleChange} = this.props;
-//         return (
-//             <li>
-//                 <input
-//                     id={`item-${this.props.id}`} 
-//                     type='checkbox' 
-//                     checked={this.props.completed}
-//                     onChange={() => this.props.handleChange(id)}
-//                 />
-//                 <label className='ml-2'>{text}</label>
-//             </li>
-//         )
-//     }
-// }
-
-function TodoItem(props){
+const Todo = ({toggleCheck,todoItems,deleteItem,editItem}) => {
     return (
-        <li>
-            <input
-                type='checkbox' 
-                checked={props.item.completed}
-                onChange={() => props.handleChange(props.item.id)}
-            />
-            <label className='ml-2'>{props.item.text}</label>
-        </li>
-    )
+        <section className='border rounded shadow'>
+
+            <h4 className='text-center py-2 text-lg font-semibold bg-gray-500 text-white'>
+                ToDo Items
+            </h4>
+            {todoItems.length > 0 
+                ?<ul>
+                    {todoItems.map(todo => <TodoItem toggleCheck={toggleCheck} deleteItem={deleteItem} editItem={editItem} key={todo.id} item={todo}/>)}
+                </ul>
+                : <h1 className='text-center text-2xl font-semibold capitalize p-4 text-gray-600'>You havent added any items</h1>
+            }
+        </section>
+    );
 }
 
-export default TodoItem;
+export default Todo;
