@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import Todo from './components/Todo';
 import AddTodoItem from './components/AddOrEditTodoItem';
 import todos from './components/todos';
+import TemperatureCalculator from './components/TemperatureCalculator';
 
 
 const App = () => {
@@ -11,10 +12,7 @@ const App = () => {
     const toggleCheck = (id) => {
         setTodo(prevTodo => {
             let updatedTodoItems = prevTodo.map(todo => {
-                if(todo.id === id){
-                    todo.completed = !todo.completed;
-                }
-                return {...todo};
+                return todo.id === id ? {...todo, 'completed': !todo.completed} : todo;
             });
             
             return updatedTodoItems;
@@ -72,14 +70,17 @@ const App = () => {
 
 
     return (
-        <div className='select-none'>
-            <NavBar/>
-            <section className='m-6'>
-                <AddTodoItem addOrEditItem={addOrEditItem}/>
-                <Todo toggleCheck={toggleCheck} deleteItem={deleteItem} editItem={editItem} todoItems={todoItems}/>
-            </section>
+        // <div className='select-none'>
+        //     <NavBar/>
+        //     <section className='m-6'>
+        //         <AddTodoItem addOrEditItem={addOrEditItem}/>
+        //         <Todo toggleCheck={toggleCheck} deleteItem={deleteItem} editItem={editItem} todoItems={todoItems}/>
+        //     </section>
 
-        </div>
+        // </div>
+        <>
+            <TemperatureCalculator/>
+        </>
     );
 }
 
