@@ -1,0 +1,9 @@
+.possible-answer:hover{
+    @apply 
+    bg-blue-500 text-white;
+}
+
+.possible-answer:hover > span{
+    @apply 
+    bg-blue-500 border-white;
+}

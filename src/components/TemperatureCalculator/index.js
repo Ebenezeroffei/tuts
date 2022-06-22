@@ -103,7 +103,7 @@ const TemperatureCalculator = () => {
             <section className='m-6'>
                 <div className='grid grid-cols-4 grid-cols-1 gap-4'>
                     <input type="number" onChange={handleChange} step="0.1" className='p-2 rounded border-2 sm:col-span-3 col-span-4 outline-none text-gray-800 text-lg focus:border-gray-500' placeholder='Enter a temperature' value={temperature.value} name="value" />
-                    <select onChange={handleChange} name='unit' value={temperature.unit} className='border-2 sm:col-start-4 sm:co l-end-5 col-start-1 col-end-5 p-2 outline-none'>
+                    <select onChange={handleChange} name='unit' value={temperature.unit} className='border-2 sm:col-start-4 sm:col-end-5 col-start-1 col-end-5 p-2 outline-none'>
                         <option value="Celsius">Celsius</option>
                         <option value="Kelvin">Kelvin</option>
                         <option value="Farenheit">Farenheit</option>
