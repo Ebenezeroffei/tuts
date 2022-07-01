@@ -1,7 +1,9 @@
 import React from 'react'
-import TemperatureCalculator from './components/TemperatureCalculator/';
-import Quiz from './components/Quiz';
-import Todos from './components/Todos';
+import Router from './components/Router';
+// import {Users} from './components/Practices';
+// import TemperatureCalculator from './components/TemperatureCalculator/';
+// import Quiz from './components/Quiz';
+// import Todos from './components/Todos';
 
 
 
@@ -9,9 +11,7 @@ const App = () => {
 
     return (
         <>
-            {/* <TemperatureCalculator/> */}
-            {/* <Quiz/> */}
-            <Todos/>
+            <Router/>
         </>
     );
 }
