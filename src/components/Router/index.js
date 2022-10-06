@@ -15,7 +15,6 @@ import Logout from './Logout';
 
 
 const Router = () => {
-
     const [isLoggedIn,setIsLoggedIn] = useState(false);
     const [user,setUser] = useState({
         username: '',
