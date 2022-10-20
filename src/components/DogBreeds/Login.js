@@ -1,4 +1,5 @@
 import React, { useContext,useState } from 'react';
+import { handleLoginValueInput } from './control';
 import { AppContext } from '.';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,7 +16,7 @@ const TextInput = ({labelText, value,name,obscureText,handleLoginValueInput}) =>
 }
 
 const Login = () => {
-    const {handleLoginValueInput,setUserDetails,userDetails,setIsLoggedIn} = useContext(AppContext);
+    const {setUserDetails,userDetails} = useContext(AppContext);
     const {username,password} =  userDetails;
     const navigate = useNavigate();
     const [errorDetected, setErrorDetected] = useState(false);
@@ -23,6 +24,10 @@ const Login = () => {
     const signIn = () => {
         if(username === 'eoffei' && password === 'testing321'){
             localStorage.setItem('isLoggedIn',true);
+            setUserDetails({
+                username: '',
+                password: '',
+            })
             navigate('/');
         }
         else{
