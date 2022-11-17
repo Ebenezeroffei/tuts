@@ -1,6 +1,25 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Stark's React Mini Projects
+This repository contains all the various mini projects I built with react. These projects are;
+
+### * Temperature Calculator
+This project converts a temperture entered by a user to the various temperature conversions such as **Celsius, Kelvin** and **Fahrenheit**.
+
+
+### * Quiz
+This project contains a set of questions which the user will be asked and graded when the test is over. You can add more questions to the `components\Quiz\data.json`;
+
+
+### * Todos
+This project is a todo app that keeps track of todo items.
+
+
+### * Github Users
+This is a project that loads github users from the web. It also gives a detail view of each of them.
+
+
+### Dog Breeds
+This project loads the various dog breeds and their images from the [Dog Ceo](https://www.google.com "Dog Ceo) api.
 
 ## Available Scripts
 
