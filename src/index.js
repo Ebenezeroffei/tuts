@@ -14,6 +14,7 @@ import UserDetail from './components/GithubUsers/UserDetail';
 import DogBreeds from './components/DogBreeds'
 import Home from './components/DogBreeds/Home';
 import BreedDetail from './components/DogBreeds/BreedDetail';
+import TailwindExamples from './components/TailwindExamples';
 
 AOS.init()
 
@@ -31,6 +32,7 @@ ReactDOM.render(
                     <Route index element={<Home/>}/>
                     <Route path=':breed/' element={<BreedDetail/>}/>
                 </Route>
+                <Route element={<TailwindExamples/>} path='examples/'/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,

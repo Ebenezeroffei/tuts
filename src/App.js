@@ -1,10 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-// import {Users} from './components/Practices';
-import {DogBreeds} from './components/DogBreeds';
-// import TemperatureCalculator from './components/TemperatureCalculator/';
-// import Quiz from './components/Quiz';
-import Todos from './components/Todos';
 
 
 
@@ -26,6 +21,10 @@ const App = () => {
         {
             name: 'Github Users',
             path: 'github-users'
+        },
+        {
+            name: 'Dog Breeds',
+            path: 'dog-breeds'
         },
     ];
 
